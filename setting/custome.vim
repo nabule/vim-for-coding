@@ -137,7 +137,7 @@ set laststatus=2
 " 显示行号
 set number
 " 取消换行
-set nowrap
+" set nowrap
 
 " 括号配对情况, 跳转并高亮一下匹配的括号
 set showmatch
@@ -467,7 +467,7 @@ set pastetoggle=<F7>            "    when in insert mode, press <F7> to go to
 noremap H ^
 noremap L $
 " Map ; to : and save a million keystrokes 用于快速进入命令行
-nnoremap ; :
+" nnoremap ; :
 " 命令行模式增强，ctrl - a到行首， -e 到行尾
 cnoremap <C-a> <Home>
 " 搜索相关
