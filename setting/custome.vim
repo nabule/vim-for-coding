@@ -56,7 +56,6 @@ set autoread
 " 关闭交换文件
 "set noswapfile
 
-
 " TODO: remove this, use gundo
 " create undo file
 " if has('persistent_undo')
@@ -415,7 +414,7 @@ set ai si ci
 
 "--------------------------自定义快捷键---------------------
 map Y y$
-map <space> /
+" map <space> /
 map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
@@ -489,7 +488,7 @@ cmap w!! w !sudo tee >/dev/null %
 nnoremap ' `
 nnoremap ` '
 " remap U to <C-r> for easier redo
-nnoremap U <C-r>
+" nnoremap U <C-r>
 
 " 绑定插入模式下的方向键
 imap <C-b> <Left>
@@ -502,13 +501,14 @@ imap <C-d> <Del>
 
 " 提示参数信息
 imap <C-l> <C-x><C-o>
+inoremap jj <Esc>`^
 
 " 保存时自动将tab转换为相应长度的空格
 " 此行禁止开启，否则会导致撤销到最新时保存后，无法重做！！！
 " autocmd BufWritePre * :%retab!
 
 " 设置为搜索时不要回卷
-set nowrapscan
+" set nowrapscan
 
 " 设置选中背景
 hi Visual term=reverse cterm=reverse ctermbg=black guibg=grey60

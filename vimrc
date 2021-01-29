@@ -33,8 +33,11 @@ Plugin 'rking/ag.vim'
 call vundle#end()
 filetype plugin indent on
 
-let mapleader=','
-let g:mapleader=','
+" let mapleader=","
+" let g:mapleader=","
+
+let mapleader="\<Space>"
+let g:mapleader="\<Space>"
 " 引入插件的设置
 source ~/.vim/setting/ctrlp-funky.vim
 source ~/.vim/setting/ctrlp.vim
@@ -54,3 +57,10 @@ source ~/.vim/setting/vim-quickrun.vim
 " 自定义设置
 source ~/.vim/setting/custome.vim
 set runtimepath^=~/.vim/bundle/ag.vim
+
+set nu
+augroup relative_numbser
+    autocmd!
+    autocmd InsertEnter * :set norelativenumber
+    autocmd InsertLeave * :set relativenumber
+augroup END
